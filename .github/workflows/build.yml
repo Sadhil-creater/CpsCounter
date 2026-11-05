@@ -16,7 +16,7 @@ jobs:
       run: |
         mkdir -p src/main/resources
         echo "[]" > src/main/resources/mcmod.info
-        curl -LO https://gradle.org
+        curl -L https://gradle.org -o gradle-2.7-bin.zip
         unzip -q gradle-2.7-bin.zip
         export PATH=$PWD/gradle-2.7/bin:$PATH
         gradle setupDecompWorkspace build
